@@ -151,7 +151,7 @@ typedef __m128 v4sf;
 /*
   ARM NEON support macros
 */
-#elif !defined(PFFFT_SIMD_DISABLE) && (defined(__ARM_NEON) || defined(__aarch64__) || defined(__arm64) || defined(_M_ARM64))
+#elif !defined(PFFFT_SIMD_DISABLE) && (defined(__ARM_NEON) || defined(__aarch64__) || defined(__arm64) || defined(_M_ARM64) || defined(__wasm_simd128__))
 #  include <arm_neon.h>
 typedef float32x4_t v4sf;
 #  define SIMD_SZ 4
